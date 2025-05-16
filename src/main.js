@@ -11,7 +11,7 @@ import {
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
-const formSearch = document.querySelector('.form-search');
+const formSearch = document.querySelector('.form');
 const gallery = document.querySelector('.gallery');
 const searchInput = document.querySelector('.form-search-input');
 const loader = document.querySelector('.loader');
