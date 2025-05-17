@@ -23,6 +23,14 @@ formSearch.addEventListener('submit', async e => {
   hideLoader();
   const queryValue = searchInput.value.trim();
 
+  if (!queryValue) {
+    iziToast.warning({
+      title: 'Warning',
+      message: 'Please fill in the input field!',
+    });
+    return;
+  }
+
   clearGallery();
   showLoader();
 
@@ -38,7 +46,7 @@ formSearch.addEventListener('submit', async e => {
         });
       }
 
-      gallery.innerHTML = ('beforeend', createGallery(data.hits));
+      gallery.innerHTML = createGallery(data.hits);
 
       refreshLightbox();
 
